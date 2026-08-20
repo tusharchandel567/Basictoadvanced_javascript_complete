@@ -1,0 +1,26 @@
+{
+  "name": "basictoadvanced_javascript_complete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tusharchandel567/Basictoadvanced_javascript_complete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tusharchandel567/Basictoadvanced_javascript_complete/issues"
+  },
+  "homepage": "https://github.com/tusharchandel567/Basictoadvanced_javascript_complete#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0"
+  }
+}

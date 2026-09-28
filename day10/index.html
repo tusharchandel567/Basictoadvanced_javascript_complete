@@ -1,0 +1,69 @@
+<!--
+variable
+
+var
+let 
+const
+
+
+    <script>
+"use strict"
+var x =10;
+let y=30;
+const z=50;
+
+function f1(){
+    document.write("f1 x="+ x+"<br> y = "+y+"<br> z = " + z +"<br>" )
+}
+function f2 (){
+    document.write("f2 x="+ x+"<br> y = "+y+"<br> z = " + z +"<br>" )
+}
+f1();
+f2();
+</script>
+
+-->
+
+<!-- trun off strict mode to define the variable in function without keywors -->
+
+<script>
+    function f1(){
+        a = 100;
+        document.write("a is value = "+ a + "<br")
+    }
+    f1();
+</script>
+
+<!-- i declare a global variable inside function using "window" object -->
+ 
+<script>
+    function f1(){
+        window.a = 100;
+        document.write("a is value = "+ a + "<br")
+    }
+    f1();
+</script>
+
+<!--
+multiple variable -->
+
+<script>
+    function f1(){
+        var x,y,z;
+        x=10;
+        y=20;
+        z=30;
+        document.write("a is value = "+ x + "<br> y= " +y+"<br> z= "+z+"<br>")
+    }
+    f1();
+</script>
+
+<!-- es6 allow multiple variables []-->
+
+<script>
+    function f1(){
+        var [x,y,z] = [10,20,200]
+        document.write("a is value = "+ x + "<br> y= " +y+"<br> z= "+z+"<br>")
+    }
+    f1();
+</script>

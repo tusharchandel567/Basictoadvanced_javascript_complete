@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator </title>
+</head>
+<body>
+    <div class="claculator">
+        <div class="row">
+            <!--Amount-->
+            <div>
+                <div class="top-line">
+                    <span>Amount you need</span>
+                    <input
+                    type="text"
+                    id="amountVlaue"
+                    class="value-box"
+                    value="500000">
+              </div>
+              <div class="slider-container">
+                <input
+                type="range"
+                id="amount"
+                min="50000"
+                max="4000000"
+                step="50000"
+                value="500000">
+                <div class="range-labels">
+                 <span>500000</span>
+                 <span>4000000</span>
+                </div>
+
+              </div>
+            </div>
+            <!--years-->
+            <div class="top-line">
+                <span>for</span>
+                <input 
+                type="text"
+                id="yearsValue"
+                class="value-box years-box"
+                value="5">
+                <span>Years</span>
+            </div>
+            <div class="slider-container">
+                <input
+                type="range"
+                id="years"
+                min="1"
+                max="5"
+                step="1"
+                value="5"
+                >
+                <div class="range-labels">
+                    <span>1 year</span>
+                    <span>5 year </span>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!--
+java String string
+
+1. Double Quotes " "
+2. Single Quotes ' '
+3. Backticks `  ` 
+
+-->
+
+<!--
+Examlple-->
+
+<!--
+<script>
+    var link  = '<a href="./public/images">Home </a>'
+    documnet.write(link)
+</script>
+-->
+
+<!--
+<script>
+    var name = prompt("enter your name (real)");
+    var age = ParseInt(prompt("enter your real age "));
+    var msg1 = "hello!" + name + "your age is define the final value " + (age+1)+"nextyear";
+    document.write(msg1)
+</script>-->
+
+<!--
+ES5 --- embded expresions -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     var name = prompt("enter your name (real)");
+    var age = ParseInt(prompt("enter your real age "));
+    var msg1 =  `"hello!" ${name}  "your age is define the final value " ${age+1}+"nextyear"`;
+    document.write(msg1)
+</script>
+</head>
+<body>
+    
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>String</title>
+ <script type="text/javascript">
+ function RegisterClick(){
+ var username = document.getElementById("UserName").value;
+ var userError = document.getElementById("UserError");
+ if(username=="")
+ {
+ userError.innerHTML = "User NameRequired".fontcolor('red').fontsize(2).bold().italics();
+ } else {
+ document.write("Registered..");
+ }
+ }
+ function ChangeCase(){
+ var ifsc = document.getElementById("ifsc").value;
+ document.getElementById("ifsc").value = ifsc.toUpperCase();
+ }
+ </script>
+</head>
+<body>
+ <dl>
+ <dt>User Name</dt>
+ <dd><input type="text" id="UserName"></dd>
+ <dd id="UserError"></dd>
+ <dt>IFSC Code</dt>
+ <dd><input type="text" onkeyup="ChangeCase()" size="6" id="ifsc"></dd>
+ </dl>
+ <button onclick="RegisterClick()">Register</button>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>String</title>
+ <style>
+ .error-style {
+ color:red;
+ font-weight: bold;
+ font-style: italic;
+ }
+ </style>
+ <script type="text/javascript">
+ function RegisterClick(){
+ var username = document.getElementById("UserName").value;
+ var userError = document.getElementById("UserError");
+ if(username=="")
+ {
+ userError.innerHTML = "User Name Required";
+ userError.className = "error-style";
+ } else {
+ document.write("Registered..");
+ }
+ }
+ function ChangeCase(){
+ var ifsc = document.getElementById("ifsc").value;
+ document.getElementById("ifsc").value = ifsc.toUpperCase();
+ }
+ </script>
+</head>
+<body>
+ <dl>
+ <dt>User Name</dt>
+ <dd><input type="text" id="UserName"></dd>
+ <dd id="UserError"></dd>
+ <dt>IFSC Code</dt>
+ <dd><input type="text" onkeyup="ChangeCase()" size="6" id="ifsc"></dd>
+ </dl>
+ <button onclick="RegisterClick()">Register</button>
+</body>
+</html>-->

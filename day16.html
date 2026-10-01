@@ -1,0 +1,90 @@
+<!--
+Meta Charecter
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function submitclick(){
+        var test = documnet.getElementById("Test").value;
+        if(test.match(/.o./)){
+           document.write(`your entered test : ${test}`);
+        }
+        else {
+            alert("invaid ");
+        }
+    }
+</script>
+</head>
+<body>
+    your string : <input type="text" id="test"><button onclick="submit">
+         submit
+    </button>
+</body>
+</html>
+-->
+
+<!--Write expression for validating email address date format mm-dd-yy 
+- name 4 to 15 chars with at least one
+- upper core , number and special charecter  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h2>form vlidation</h2>
+    <form onsubmit="return validateForm()">
+        Name:
+        <input type="text" id="name">
+        <br><br>
+
+        Email:
+        <input type="text" id="email">
+        <br><br>
+
+        Date (MM-DD-YY):
+        <input type="text" id="date">
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+    <script>
+        function validateform(){
+            let name = documnet.getElementId("name").value;
+            let email = documnet.getElementId("email").value;
+            let date = document.getElementById("date").value;
+            //name : 4-15 charcters,
+            // at least one lowerscase , one number and one special character
+            let namePattern = /^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Za-z0-9]).{4,15}$/;
+            //Email Validation
+            let emailPattren = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            //date format MM-DD-YY
+            let datePattern = /^(0[1-9]| 1[0-2])-(0[1-9]|[12] [0-9]| 3[01])-\d{2}$/;
+            if(!namePattren.test(name)){
+                alert("name must be 4 - 15 chacters and contain at least one lower case letter,one number and one special character");
+                return false;
+            }
+            if(!emailPattren.test(email)){
+                alert("enter a valid emial");
+                return false;
+            }
+            if(!datePattren.test(date)){
+                alert("date must be in MM-DD-YY format");
+                return false;
+            }
+            alert("form submitted sucressfully");
+            return true;
+        }
+    </script>
+</body>
+</html>

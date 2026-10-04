@@ -1,0 +1,56 @@
+<!--
+how to convert a numeric string into number
+parseIntr() , ParseFloat()
+ -->
+
+ <script>
+    var x = "trure";
+    var y = (x=="true")? true:false;
+    document.write(`x is ${typeof x} <br> y is ${typeof y}`);
+ </script>
+<!-- Undefined Type 
+-->
+ <script>
+    var name = "samsung";
+    var pric;
+    document.write(`pric is ${typeof pric} <br> name is ${typeof name}`);
+ </script>
+<!--Undefined Type -->
+ <script>
+    var name ="samsung";
+    var price = 1000;
+    if(price == undefined){
+        price = price;
+    }
+    document.write(`name is ${typeof name} <br> price is ${typeof price}`);
+ </script>
+
+<!--NULL-->
+ <script>
+    var price = prompt("Enter the price");
+    document.write(`price is ${typeof price} <br> price is ${price}`);
+    if(price == null || price == undefined || price == ""){
+        price = 1000;
+    }
+    document.write(`price is ${typeof price} <br> price is ${price}`);
+ </script>
+
+ <!--Symbol Type-->
+
+ <script>
+    var userdetails = {
+        username : "samsung",
+        price : 1000,
+        age : 20,
+        product : "mobile"
+    
+    }
+    for(var key in userdetails){
+        document.write(`key is ${key} <br> value is ${userdetails[key]} <br>`);
+    }
+ </script>
+ 
+ <script>
+    var sym = Symbol("mySymbol");
+    document.write(`sym is ${typeof sym}`);
+ </script>

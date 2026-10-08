@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+ var photos = ["images/m1.jpg", "images/m2.jpg", "images/m3.jpg",
+"images/m4.jpg", "images/m5.jpg"];
+ function bodyload(){
+ for(var path of photos) {
+ var img = document.createElement("img");
+img.src = path;
+img.width = "200";
+img.height = "200";
+document.getElementById("gallery").appendChild(img);
+ }
+ }
+ </script>
+ <style>
+ body {
+ height: 500px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+ img:hover {
+ transform: scale(1.5);
+ transition: 2s;
+ box-shadow: 10px 10px 3px gray;
+ }
+ img {
+ transition: 2s;
+ }
+ marquee {
+ padding: 100px;
+ }
+ </style>
+</head>
+<body onload="bodyload()">
+ <div>
+ <marquee scrollamount="10" id="gallery" onmouseover="this.stop()"
+onmouseout="this.start()">
+ </marquee>
+ </div>
+</body>
+</html>

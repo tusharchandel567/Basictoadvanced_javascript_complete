@@ -1,0 +1,15 @@
+{
+    "title" : "vivo t1 44w (Midnight Galaxy ,128 gb ) (4 GB RAM)",
+    "price" : 14499,
+    "actualPrice":17999,
+    "offers" : [
+        "Bank offers 10% off bank of Barodera Creadit Card EMI Transactions , up ti a , 1000 on orders of 5,000 and above T&C",
+        "Bank Offer10% off on IDFc FIRST BANK Credit Card EMI Transactions , up to rs, 1000 on orders of rs - 5000 and above T&C",
+        "Bank Offer10% off on IdusIn BankCreadit card Emi Transactions , uup to rs - 1000 on orders of rs - 5000 and above T&C",
+        "BUY 2 GET 1 FREE on select items T&C",
+        "No Cost EMI on Bajaj Finserv EMI Card on cart value above Rs. 3000 T&C",
+        "Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to Rs. 500* Know More" 
+       ],
+       "rating" : {"rate" : 4.3, "ratings" : 96490, "reviews" : 10000},
+       "photo" :"./public/doc/images/vivo.png"
+}

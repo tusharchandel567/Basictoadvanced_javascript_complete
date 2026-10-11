@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+ <script>
+ function bodyload(){
+ fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?
+sol=1000&api_key=6ffzhNjjV1XA2HkP9u2ghEmZVMK8Rb2M2ZG4n6Fl&quot;)
+ .then(function(res){
+ return res.json();
+ })
+ .then(function(marsObject){
+ console.log(marsObject);
+ for(var item of marsObject.photos)
+ {
+ var div = document.createElement("div");
+div.className = "card p-2 m-2";
+div.style.width = "200px";
+div.innerHTML = `
+ <img src=${item.img_src} height="150" class="card-img-top">
+<div class="card-header">
+ <h2>${item.id}</h2>
+ </div>
+<div class="card-body">
+ <dl>
+ <dt>Camera</dt>
+<dd>${item.camera.full_name}</dd>
+<dt>Rover</dt>
+<dd>${item.rover.name}</dd>
+ </dl>
+ </div>
+ `;
+document.querySelector("main").appendChild(div);
+ }
+ })
+ }
+ </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+ <h2>Mars Rover Photos</h2>
+ <main class="d-flex flex-wrap">
+ </main>
+</body>
+</html>

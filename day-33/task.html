@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var userDetails = {
+            username:"john",
+            pin:3345
+        }
+        function submitclick(){
+            var count =0;
+            var pin = parseInt(document.getElementById("pin").value);
+            if(userDetails.pin==pin){
+                document.write("pin verified sucessfully");
+            }else {
+                count++;
+                do
+                {
+                    document.write(`invaildpin - ${3-count} attempts elsef`));
+                } while(count<=3)
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>verify Pin</legend>
+        <div>
+            your pin : <input type="text" id="Pin"><button onclick="submitclcick()">Submit</button>
+        </div>
+        <p aling="center" id="error"></p>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- mars 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrapicons.css">
+    <script>
+        
+        function bodyload(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                for(var photo of data.photos){
+                    var card = document.createElement("div");
+                    card.className = "card p-2 m-2";
+                    card.style.width = "200px";
+                    card.innerHTML = `
+                        <img src=${photo.img_src} class="card-img-top" height="100">
+                        <div class="card-header overflow-auto" style="height:80px">
+                            <p>${photo.rover.name}</p>
+                        </div>
+                        <div class="card-body">
+                            <dl>
+                                <dt>Camera</dt>
+                                <dd>${photo.camera.full_name}</dd>
+                                <dt>Earth Date</dt>
+                                <dd>${photo.earth_date}</dd>
+                            </dl>
+                        </div>
+                    `;
+                    document.querySelector("main").appendChild(card);
+                }
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h2>Mars Rover Photos</h2>
+    <main class="d-flex flex-wrap">
+
+    </main>
+</body>
+</html>
+-->
+
+<!--Fake store api-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrapicons.css">
+    <script>
+        function bodyload(){
+            fetch("https://fakestoreapi.com/products")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(products){
+                for(var product of products){
+                    var card = document.createElement("div");
+                    card.className = "card p-2 m-2";
+                    card.style.width = "200px";
+                    card.innerHTML = `
+                        <img src=${product.image} class="card-img-top" height="100">
+                        <div class="card-header overflow-auto" style="height:80px">
+                            <p>${product.title}</p>
+                        </div>
+                        <div class="card-body">
+                            <dl>
+                                <dt>Price</dt>
+                                <dd>${product.price}</dd>
+                                <dt>Rating</dt>
+                                <dd>
+                                    <span class="bi bi-star-fill text-success"> </span>
+                                    ${product.rating.rate} [${product.rating.count}]
+                                </dd>
+                            </dl>
+                        </div>
+                    `;
+                    document.querySelector("main").appendChild(card);
+                }
+            })
+        }
+</script>
+</head>
+
+
+<body>
+    
+</body>
+</html>

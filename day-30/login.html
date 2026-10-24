@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstarp/dist/css/bootstrap.css">
+    <script>
+        var userdetails = {
+            "USER NAME": "tushar chandel",
+            "Password" : "1Tushar@305"
+        }
+        function loginclick(){
+            var username = document.getElementById("txtName").value;
+            var Password = document.getElementById("txtPassword").value;
+            var error = document.querySelector("p");
+            if(username==userdetails.username){
+                if(Password === userdetails.Password){
+                    document.write("login sucess");
+                } else {
+                    error.innerHTML = "Invalid Password".fontcolor("red");
+                } 
+                } else {
+                    error.innerHTML= "Invalid username".fontcolor("red");
+                }
+                {
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>USER NAME</dt>
+        <dd><input type="text" id="txtName"></dd>
+        <dt>Password</dt>
+        <dd><input type="text" id="txtPassword"></dd>
+    </dl>
+    <button onclick="loginclick()">
+        Login
+    </button>
+    <p align="center"></p>
+</body>
+</html>

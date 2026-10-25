@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write a Program to find if the values are for square or rectangle .</title>
     <script>
-        function findsquare (side1,side2,side3,side4){
-            if(side1==side2 && side2==side3 && side3==side4){
-                document.write("values are for squares");
-            }else {
-                document.write ("values are of rectangle ");
-            }
+        
+
+
+var menu = [
+    {category:"electronics",products:["telvesions","Mobiles"]},
+    {category:"footwear",products:["boots","casuals"]}
+];
+
+function bodyload(){
+    for(var i=0;i<menu.length;i++){
+        var li = document.createElement("li");
+        li.innerHTML = menu[i].category;
+        for(var j=0;j<menu[i].products.length;j++){
+            var ul = document.createElement("ul");
+            var ulli = document.createElement("li");
+            ulli = menu[i].products[j];
+            ul.appendChild(ulli);
+            li.appendChild(ul);
+            document.querySelector("ol").appendChild(li);
         }
-        findsquare(10,2020,10[])
+    }
+}
+
     </script>
 </head>
-<body>
-    
+<body onload="bodyload()">
+    <div id="container">
+
+    </div>
 </body>
 </html>
